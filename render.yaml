@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: pywebio-app
+    runtime: python
+    buildCommand: pip install -r piska.txt
+    startCommand: python aaaaaa.py
