@@ -18,7 +18,7 @@ async def main():
     box = output()
     put_scrollable(box, height=300, keep_bottom=True)
 
-    nickname = await input('ы', required=True, placeholder='Кличка', validate=lambda n: 'Занято' if n in online or n == 'd' else None)
+    nickname = await input('ы', required=True, placeholder='Кличка', color="blue", validate=lambda n: 'Это имя недоступно' if n == 'Зеленский' else None)
     online.add(nickname)
 
     chat_msgs.append(('d', f" + `{nickname}` + с нами"))
